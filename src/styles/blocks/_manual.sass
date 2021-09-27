@@ -1,0 +1,40 @@
+.manual
+
+  &__list
+    +flex($alignment: stretch)
+    margin-bottom: 60px
+
+  &__item
+    +flex(column, flex-start)
+    padding: 30px 40px
+    background-color: $card-bg-color
+    border-radius: $border-radius
+    min-height: 258px
+    width: 333px
+
+    &:not(:last-of-type)
+      margin-right: 40px
+
+  &__icon
+    margin-bottom: 24px
+
+  &__title
+    font-weight: 600
+    display: block
+    margin-bottom: 8px
+
+  &__size
+    color: $title-color
+    display: block
+    margin-bottom: 24px
+
+  &__btn
+    +size(24px)
+    background-image: url('../img/download-icon.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    align-self: flex-end
+    margin-top: auto
+
+  &__description
+    font-size: 18px
