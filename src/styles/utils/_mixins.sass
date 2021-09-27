@@ -1,0 +1,18 @@
+@mixin hover($bg-color, $text-color)
+  &:hover
+    background-color: shade($bg-color, 20%)
+    color: shade($text-color, 20%)
+
+@mixin active($color)
+  &:active
+    background-color: tint($color, 20%)
+
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+
+@mixin flex($direction: row, $alignment: center, $justify: flex-start)
+  display: flex
+  flex-direction: $direction
+  align-items: $alignment
+  justify-content: $justify
