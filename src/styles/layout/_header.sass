@@ -1,0 +1,22 @@
+.header
+  background-color: $bg-color
+  padding: 12px 0
+  margin-bottom: 50px
+
+  &__content 
+    +flex($justify: space-between)
+
+  &__logo
+    +size(55px, 46px)
+
+    &-img
+      +size(100%)
+  
+  &__search-btn
+    +size(24px)
+    background-color: transparent
+    border: none
+    margin-right: 60px
+
+  &__search-icon
+    +size(100%)
