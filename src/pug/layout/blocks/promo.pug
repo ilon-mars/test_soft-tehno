@@ -1,0 +1,20 @@
+- var linksList = ['Получить регистрационный код', 'Руководство пользователя', 'Обновления программы'];
+
+section.section.container
+  .promo
+    h1.promo__title 
+      span.promo__subtitle Программный комплекс 
+      span.title Бухучет ПРО 
+
+    p.promo__description 
+      | Ведение бухгалтерского учета, подготовка бухгалтерской и налоговой отчетности в ФНС, ПФР, ФСС, ФСРАР в электронном виде на магнитных или бумажных носителях, в том числе для передачи по телекоммуникационным каналам связи (ТКС) с электронно-цифровой подписью (ЭЦП).
+
+    .promo__btns 
+      button.btn Купить от 4900 Р
+      button.link.promo__btn Скачать
+
+    ul.promo__links 
+      each name in linksList
+        li.link.promo__link
+            a(href="#")= name
+    
