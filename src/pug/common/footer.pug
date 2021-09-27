@@ -1,0 +1,22 @@
+- var phonesList = ['+ 7 (499) 000-00-00', '+ 7 (499) 000-00-00', '+ 7 (499) 000-00-00'];
+
+footer.footer 
+  .container.footer__content 
+    img.footer__logo(src="img/logo-light.svg", alt="лого: Бухучет ПРО")
+    address 
+      ul.footer__contacts.contacts
+
+        li.contacts__phone 
+          ul.contacts__phones.phones 
+            each phone in phonesList
+              li.phones__item
+                a.phones__link(href="tel:#{phone}")= phone
+        
+        li.contacts__email.email
+          a.email__link(href="mailto:info@mail.ru") info@mail.ru
+
+        li.contacts__address.address 
+          span.address__city-info 115054, г. Москва
+          span.address__address-info Кремлевская набережная, 1
+
+
