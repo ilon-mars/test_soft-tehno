@@ -1,0 +1,33 @@
+.offer
+  padding: 60px
+  background-color: $card-bg-color
+  height: 716px
+  background-image: url('../img/offer-img.png')
+  background-repeat: no-repeat
+  background-size: 670px 436px
+  background-position: center bottom 60px
+
+  &__title
+    +flex(column)
+    font-size: 40px
+    margin-bottom: 40px
+
+  &__subtitle
+    font-size: 20px
+
+  &__btns 
+    +flex(column)
+
+  &__btn
+    display: inline-flex
+    align-items: center
+    position: relative
+    padding-right: 25px
+    margin-top: 24px
+
+    &::after
+      +size(8px, 14px)
+      position: absolute
+      content: ''
+      background: url('../img/arrow-right.svg') no-repeat center / contain
+      right: 0
