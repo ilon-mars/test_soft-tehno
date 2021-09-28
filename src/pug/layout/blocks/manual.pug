@@ -1,7 +1,7 @@
 -
   var manualList = [
-    {'title': 'ПК «Бухучет ПРО»: Полное руководство', 'icon': 'img/pdf-icon.svg', 'size': '546 кб'},
-    {'title': 'ПК «Бухучет ПРО»: Полное руководство', 'icon': 'img/manual-icon.svg', 'size': ''},
+    {'title': 'ПК «Бухучет ПРО»: Полное руководство', 'icon': 'img/pdf-icon.svg', 'size': '546 кб', 'btn-icon': 'img/download-icon.svg'},
+    {'title': 'ПК «Бухучет ПРО»: Полное руководство', 'icon': 'img/manual-icon.svg', 'size': '', 'btn-icon': 'img/open-icon.svg'},
   ];
 
 section.section.container.manual
@@ -17,6 +17,7 @@ section.section.container.manual
             span.manual__size= object['size']
           
           button.manual__btn
+            img.manual__btn-icon(src= object['btn-icon'], alt=object['title'])
 
     p.manual__description 
       | Для Программы “Бухучет ПРО” создан и постоянно обновляется Руководства пользователя в PDF-формате. Руководство пользователя также представленно в web-формате с системой контекстного поиска.
