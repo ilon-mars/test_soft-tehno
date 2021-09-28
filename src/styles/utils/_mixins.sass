@@ -1,3 +1,4 @@
+// effects
 @mixin hover($bg-color, $text-color)
   &:hover
     background-color: shade($bg-color, 20%)
@@ -7,10 +8,12 @@
   &:active
     background-color: tint($color, 20%)
 
+// size
 @mixin size($width, $height: $width)
   width: $width
   height: $height
 
+// grid
 @mixin flex($direction: row, $alignment: center, $justify: flex-start)
   display: flex
   flex-direction: $direction

@@ -1,0 +1,198 @@
+// xl - 1200
+@media screen and ( max-width: $container-width-xl )
+  .container
+    max-width: $container-width-l
+
+// l - 860
+@media screen and ( max-width: $container-width-l )
+  .container
+    max-width: $container-width-m
+
+  .promo
+    background-size: 440px 440px
+    background-position: center bottom 200px
+    &__description
+      width: 100%
+
+    &__btns
+      margin-top: 60px
+      margin-bottom: 470px
+
+    &__btn
+      margin-left: 30px
+
+    &__links
+      flex-direction: column
+      align-items: flex-start
+      &-item
+        &:not(:last-of-type)
+          margin-right: 0
+          margin-bottom: 30px
+
+  .benefits
+    &__list
+      justify-content: space-between
+
+    &__item 
+      width: 48%
+      &:not(:nth-of-type(3n))
+        margin-right: 0
+
+  .offer
+    background-size: 570px 380px
+
+// m - 768
+@media screen and ( max-width: $container-width-m )
+  .container
+    max-width: $container-width-s
+
+  .title
+    font-size: 32px
+
+  .header
+    &__search-btn
+      display: none
+    &__cta
+      display: none
+
+  .menu__list
+    display: none
+  
+  .promo
+    padding: 30px 16px
+    background-size: 320px 320px
+    background-position: center bottom 190px
+
+    &__btns
+      margin-top: 60px
+      margin-bottom: 350px
+
+  .possibilities
+    &__title
+      font-size: 20px
+
+  .benefits
+    &__title
+      font-size: 20px
+
+    &__list
+      flex-direction: column
+
+    &__item
+      width: 100%
+      margin-bottom: 20px
+
+  .manual
+    &__list
+      flex-direction: column
+      margin-bottom: 40px
+
+    &__item
+      width: 100%
+      &:not(:last-of-type)
+        margin-bottom: 20px
+        margin-right: 0
+
+    &__description
+      font-size: 16px
+
+  .video-footage
+    &__item
+      width: 100%
+
+  .updates
+    &__date
+      font-size: 18px
+
+  .footer
+    padding-top: 40px
+    padding-bottom: 56px
+
+// s - 576
+@media screen and ( max-width: $container-width-s )
+  .container
+    width: 90%
+    padding: 0 15px
+
+  .section
+    margin-bottom: 120px
+
+    &-title 
+      margin-bottom: 40px
+
+  .title
+    font-size: 26px
+
+  .possibilities
+    &__item
+      padding: 20px 16px
+    &__icon
+      +size(40px)
+
+    &__title
+      font-size: 18px
+
+    &__subtitle
+      font-size: 14px
+
+  .offer
+    background-size: 300px 170px
+    height: 510px
+    padding: 30px 10px
+    text-align: center
+
+  .video-footage
+    &__text
+      font-size: 16px
+
+  .updates
+    &__wrapper
+      padding: 30px 16px
+    &__list
+      width: 100%
+    &__date
+      font-size: 18px
+
+  .phones
+    &__link
+      font-size: 18px
+
+  .email
+    &__link
+      font-size: 18px
+
+// xs - 375
+@media screen and ( max-width: $container-width-xs )
+  .container
+    padding: 0 8px
+
+  .section
+    margin-bottom: 80px
+
+  .possibilities
+    &__icon
+      display: none
+
+    &__text
+      margin-right: 15px
+
+  .promo
+    &__btn
+      margin-left: 20px
+      margin-top: 16px
+
+  .benefits
+    &__item
+      padding: 30px 16px
+
+    &__number
+      font-size: 40px
+
+    &__title
+      font-size: 20px
+
+  .updates
+    &__date
+      font-size: 16px
+    &__description
+      font-size: 14px
