@@ -11,8 +11,8 @@ section.section.container.updates
   .updates__wrapper
     ul.updates__list 
       each object, index in updatesList 
-        li.updates__item
-              span.updates__date.title= object['date']
-              p.updates__description= object['description']
+        //- li.updates__item
+        //-       span.updates__date.title= object['date']
+        //-       p.updates__description= object['description']
 
-    button.btn Загрузить еще
+    button.btn#load-more Загрузить еще
