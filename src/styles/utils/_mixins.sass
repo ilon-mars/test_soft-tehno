@@ -1,6 +1,9 @@
 // effects
+@mixin transition($style: all)
+  transition: $style 0.2s ease-in-out
+
 @mixin btn-hover($bg-color, $text-color)
-  transition: all 0.2s ease-in-out
+  +transition
   &:hover
     background-color: tint($bg-color, 10%)
     color: shade($text-color, 20%)
@@ -18,7 +21,7 @@
     box-shadow: 0 0 10px 0 $title-color
 
 @mixin link-hover($text-color: $extra-color)
-  transition: all 0.2s ease-in-out
+  +transition
   &:hover
     color: $text-color
 
@@ -31,7 +34,6 @@
     outline: none
     border: 2px solid $border-color
     border-radius: 2px
-
 
 // size
 @mixin size($width, $height: $width)

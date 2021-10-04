@@ -7,11 +7,32 @@
     &:not(:last-of-type)
       margin-bottom: 16px
 
+    &.active
+      .possibilities__description
+        +transition
+        border-top: 2px solid $title-color
+        padding-top: 10px
+        display: block
+        height: auto
+
+      .possibilities__btn
+        +transition
+        margin-bottom: 10px
+
+        &::after
+          transform: rotate(180deg)
+
+
+  &__description
+    display: none
+    height: 0
+
   &__btn
     +flex
     color: inherit
     width: 100%
     position: relative
+    
 
     &::after
       +size(17px, 10px)
@@ -21,7 +42,7 @@
       right: 0
       top: 50%
       transform: translateY(-50%)
-      transition: rotate 0.3s ease-in-out
+      +transition(rotate)
     
     &.active 
       &::after
