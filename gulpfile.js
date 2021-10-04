@@ -39,18 +39,21 @@ const config = {
     style: app + 'styles/main.sass',
     js: app + 'js/**/*.js',
     img: app + 'img/**/*.*',
+    api: app + 'api/**/*.*'
   },
   dist: {
     html: dist,
     style: dist + 'css/',
     js: dist + 'js/',
     img: dist + 'img/',
+    api: dist + 'api/'
   },
   watch: {
     html: app + 'pug/**/*.pug',
     style: app + 'styles/**/*.sass',
     js: app + 'js/**/*.js',
     img: app + 'img/**/*.*',
+    api: app + 'api/**/*.*'
   }
 }
 
@@ -133,6 +136,11 @@ const moveImg = () => {
     .pipe(browserSync.stream());
 }
 
+const moveAPI = () => {
+  return src(config.app.api)
+    .pipe(dest(config.dist.api));
+}
+
 // watch files
 
 const watchFiles = () => {
@@ -149,12 +157,14 @@ const watchFiles = () => {
   watch(config.watch.style, stylesHandler);
   watch(config.watch.js, scriptsHandler);
   watch(config.watch.img, moveImg);
+  watch(config.watch.api, moveAPI);
 };
 
 exports.default = series(
   deleteBuild, 
   parallel(compilePug, 
     moveImg, 
+    moveAPI
     ), 
   stylesHandler, 
   scriptsHandler,
@@ -163,6 +173,6 @@ exports.default = series(
 exports.build = series(
   deleteBuild, 
   setMode(true),
-  parallel(compilePug, moveImg), 
+  parallel(compilePug, moveImg, moveAPI), 
   stylesHandler, 
   scriptsHandler);
