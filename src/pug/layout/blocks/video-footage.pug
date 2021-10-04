@@ -2,14 +2,20 @@
   var videoList = [
     {'title': 'Бухучет ПРО. О программе', 'link': 'img/pdf-icon.svg'},
     {'title': 'Запись вебинара по "COVID-изменениям" в программе', 'link': 'img/manual-icon.svg'},
+    {'title': 'Бухучет ПРО. О программе', 'link': 'img/pdf-icon.svg'},
+    {'title': 'Запись вебинара по "COVID-изменениям" в программе', 'link': 'img/manual-icon.svg'}
   ];
 
 section.section.container.video-footage
     h2.section-title Видеоматериалы
 
-    ul.video-footage__list
-      each object, index in videoList
-        li.video-footage__item
-          video.video-footage__video(src= object['link'])
+    .swiper
+      ul.video-footage__list.swiper-wrapper
+        each object, index in videoList
+          li.video-footage__item.swiper-slide
+            video.video-footage__video(src= object['link'])
 
-          p.video-footage__text= object['title']
+            p.video-footage__text= object['title']
+
+      .swiper-button-prev
+      .swiper-button-next
