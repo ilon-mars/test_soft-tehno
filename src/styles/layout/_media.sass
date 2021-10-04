@@ -59,6 +59,10 @@
 
   .menu__list
     display: none
+
+  .menu__list--mobile
+    &.active
+      +flex($direction: column, $justify: center)
   
   .promo
     padding: 30px 16px

@@ -10,6 +10,14 @@ header.header
         each value, key in menuList
           li.menu__item
             a.menu__link(href= "#" + key)= value
+
+      ul.menu__list--mobile
+        each value, key in menuList
+          li.menu__item.menu__item--mobile
+            a.menu__link(href= "#" + key)= value
+        
+      button.menu__btn-close
+        img.header__menu-icon(src="img/close-icon.svg", alt="иконка: закрыть")
     
     button.header__search-btn 
       img.header__search-icon(src="img/search-icon.svg", alt="иконка: поиск")

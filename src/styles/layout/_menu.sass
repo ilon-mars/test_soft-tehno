@@ -5,3 +5,35 @@
   &__item
     &:not(:last-of-type)
       margin-right: 40px
+
+  &__link
+    +link-hover
+    +link-active
+
+  &__list--mobile
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $primary-color
+
+  &__item--mobile
+    font-size: 24px
+    color: $btn-text-color
+
+    &:not(:last-of-type)
+      margin-right: 0
+      margin-bottom: 24px
+
+  &__btn-close
+    +size(40px)
+    display: none
+    position: absolute
+    top: 20px
+    right: 25px
+    z-index: 2
+
+    &.active
+      display: block

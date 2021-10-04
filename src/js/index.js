@@ -1,10 +1,11 @@
 import 'core-js/stable';
 
-'use strict';
-
 import possibilitiesAccordion from './modules/possibilitiesAccordion';
+import headerMenu from './modules/headerMenu';
+
+'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
   possibilitiesAccordion();
-
+  headerMenu();
 })
