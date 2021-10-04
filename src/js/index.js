@@ -6,6 +6,7 @@ import headerMenu from './modules/headerMenu';
 import videoFootageSlider from './modules/videoFootageSlider';
 import fetchData from './modules/fetchData';
 import updatesLoader from './modules/updatesLoader';
+import smoothScroll from './modules/smoothScroll';
 
 ('use strict');
 
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
   possibilitiesAccordion();
   headerMenu();
   videoFootageSlider();
+  smoothScroll();
 });
