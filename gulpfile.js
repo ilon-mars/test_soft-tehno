@@ -126,7 +126,7 @@ const scriptsHandler = () => {
 // img
 const minifyImg = () => {
   return src(app + 'img/**/*.+(jpg|jpeg|png|svg)')
-    .pipe(tinyPng('DdsKRTW4fQ6KQQZt580jB5VG8W1LKfnS'))
+    .pipe(tinyPng('...'))
     .pipe(dest(config.dist.img));
 }
 
