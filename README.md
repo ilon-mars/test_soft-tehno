@@ -19,3 +19,4 @@
 Проект собирается с помощью `gulp`, для продакшена - `gulp build`. В сборке продакшена картинки минифицируются через tinyPng. Модульная сборка JavaScript файлов реализуется через Webpack.
 
 - [На ветке master находится сборка проекта](https://github.com/ilon-mars/test_soft-tehno/tree/master)
+- [Здесь находится результат верстки](https://ilon-mars.github.io/test_soft-tehno/)
